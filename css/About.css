@@ -1,0 +1,345 @@
+:root{
+    --color_nav: #FFFFFF;
+    --color_text_nav: #192A56;
+    --letra_900px: 1rem;
+    --main_font:'Zen Antique', serif;
+    --font_big_text: 'Zen Antique', serif;
+    --mainColor:#27ae60 ;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--main_font);
+  }
+  
+  /* INICIAN LOS ESTILOS DEL MENU DE NAVEGACIÓN*/
+  .nav {
+    display: flex;
+    background-color: var(--color_nav);
+    width: 100%;
+    margin: 0 auto;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    font-weight: bold;
+    border-bottom: .10rem var(--mainColor) solid;
+  }
+  
+  .nav-menu li a {
+    color: var(--color_text_nav);
+    text-decoration: none;
+  }
+  
+  .logo {
+    font-size: 1.875rem;
+    font-weight: bold;
+    padding: 0 2.5rem;
+    line-height: 5rem;
+  }
+  
+  .nav-menu {
+    display: flex;
+    margin-right: 2.5rem;
+    list-style: none;
+  }
+  
+  .items {
+    font-size: .8rem;
+    margin: 0 0.625rem;
+    line-height: 5rem;
+    text-transform: uppercase;
+    width: max-content;
+  }
+  
+  .menu-mini {
+    padding: 8px 0.75rem;
+    border-radius: 0.1875rem;
+  }
+  
+  .menu-mini:hover {
+    background-color: var(--mainColor);
+    border-radius: 1rem;
+    transition: .9s;
+    color: var(--color_nav);
+  }
+  
+  .btn {
+    color: var(--color_text_nav);
+    background: none;
+    border: none;
+    font-size: 1.875rem;
+    padding: 0 1.25rem;
+    line-height: 3.75rem;
+    cursor: pointer;
+    display: none;
+    width: 90%;
+    padding-left: 15rem;
+  }
+  .selected {
+    background-color: var(--mainColor);
+    border-radius: 1rem;
+    transition: .9s;
+  }
+  .nav img {
+        margin-top: 1.5rem;
+      width: 6rem;
+      height: 6rem;
+  }
+
+/* RESPONSIVE */
+  @media (max-width: 768px) {
+    .logo {
+      font-size: 1.5625rem;
+      padding: 0 1.25rem;
+      line-height: 3.75rem;
+    }
+  
+    .nav-menu {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      background-color: var(--color_nav);
+      position: fixed;
+      top: 3rem;
+      width: 100%;
+      padding: 1.25rem 0;  
+      height: calc(100% - 60px);
+      overflow-y: auto;  
+      left: 100%;
+      transition: left 0.3s;
+    }
+  
+    .items {
+      line-height: 4.375rem;
+    }
+  
+    .menu-mini:hover {     
+        background-color: var(--mainColor);
+        color: var(--color_nav);   
+    }
+  
+    .btn {
+      display: block;
+    }
+  
+    .nav-menu_visible {
+      left: 0;
+    }
+  
+    .btn:focus:not(:focus-visible) {
+      outline: none;
+    }
+  }
+  
+
+/* FINALIZAN LOS ESTILOS DEL MENÚ DE NAVEGACIÓN */
+
+/* INICIAN LOS ESTILOS DEL CONTENEDOR-ONE*/
+  /*************************container***************************/
+
+  .container {
+    display: flex;
+    width: 100%;
+    height: 18rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--color_text_nav);
+    font-size: 2rem;
+}
+
+
+/*************************container2***************************/
+
+.container2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+}
+.box_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30rem;
+}
+.box_1 img {
+  filter: saturate(10%);
+  width: 60%;
+}
+
+.marce, .fabio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+  
+}
+.marce h2, .fabio h2 {
+  margin-bottom: 2rem;
+  color: var(--color_text_nav);
+  font: size 2rem;
+}
+.marce p, .fabio p {
+  font-size: 1.5rem;
+}
+ 
+ 
+/************container3***********/
+.container3 {
+display: flex;
+width: 100%;
+height: 400px;
+justify-content: center;
+align-items: center;
+}
+.vision {
+display: flex;
+width: 33.33%;
+height: 50%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0.625em;
+padding: 0.625em;
+font-size: 1.5rem;
+}
+.vision h2 {
+  color: var(--color_text_nav);
+}
+.color1 {
+border: 4px solid #172774;
+}
+.color2 {
+border: 4px solid #FF0075 ;
+
+}
+
+/*************************Foot***************************/
+
+
+
+
+/* INICIAN LOS ESTILOS DEL FOOTER*/
+.footer {
+  height: 20rem;
+}
+
+.footer .box-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box-container h3{
+   font-size: 1.5rem;
+   color: var(--mainColor);
+}
+.box-container .box {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  margin-left: 10rem;
+}
+.box-container .box a {
+  font-size: 2rem;
+  color: var(--color_text_nav);
+  padding: .5rem;
+}
+.box-container .box1 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.box-container .box1 a {
+  padding: .5rem;
+}
+.box-container .box1 a:hover {
+  border-bottom: .2rem solid var(--mainColor);
+  width: 8rem;
+}
+.box-container .box2 a {
+  padding: .5rem;
+}
+.box-container .box2 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.box1 a, .box2  a {
+  text-decoration: none;
+  color: var(--color_text_nav);
+  font-size: 1.5rem;
+}
+.derechos {
+  height: 10rem;
+}
+.derechos .box3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box3 a {
+  font-size: 2rem;
+  margin: 1rem;
+}
+.facebook {
+  color: blue;
+}
+.wts {
+  color: var(--mainColor);
+}
+.instagram {
+  color: #D63B66;
+}
+.box3 a:hover {
+  
+}
+.derechos2 {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+@media (max-width:900px){
+  .vision p {
+    font-size: 1rem;
+  }
+  .vision {
+    display: flex;
+    width: 33.33%;
+    height: 100%;
+    }
+}
+@media (max-width: 600px){
+  .container3 {
+    flex-direction: column;
+    height: 40rem;
+  }
+  
+  .vision {
+   width: 90%;
+  }
+ 
+}
+@media (max-width: 768px){
+  .box-for {
+    height: 80rem;
+  }
+  .footer .box-container {
+    grid-template-columns: 1fr;
+  }
+}
